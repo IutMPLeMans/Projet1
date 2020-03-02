@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "InterfaceGraph", "InterfaceGraph\InterfaceGraph.pyproj", "{337EA4D5-D740-4539-BFA3-7A19B9499EF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{337EA4D5-D740-4539-BFA3-7A19B9499EF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{337EA4D5-D740-4539-BFA3-7A19B9499EF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A7C3035-14F9-45FF-A1A3-54BD669DC8F7}
+	EndGlobalSection
+EndGlobal
