@@ -1,21 +1,60 @@
 import numpy as np
-a= np.ones((3,3),np.uint8)
-print (a)
-k=0
-while k<9:
-    #joueur 1 
-    print("le joueur 1 joue !")
-    ligne=input("Choisir une ligne :" )
-    colonne= input("choisir une colonne :")
-    print("Vous avez joué la case ("+ligne+","+colonne+")")
-    a[[int(ligne)],[int(colonne)]]= a[[int(ligne)],[int(colonne)]]+1
+def grille(grille):
+    a= np.ones((3,3),np.uint8)
     print (a)
-    #joueur 2
-    print("c'est au tour du 2eme joueur")
-    ligne=input("Choisir une ligne :" )
-    colonne= input("choisir une colonne :")
-    print("Vous avez joué la case ("+ligne+","+colonne+")")
-    a[[int(ligne)],[int(colonne)]]= a[[int(ligne)],[int(colonne)]]-1
-    print (a)
-    k=k+1
+    
+def gagne(grille):
+    if (a[0,:].all() or a[1,:].all() or a[2,:].all() or a[:,0].all() or a[:,1].all() or a[:,2].all())==1    or   a[0,0]==a[1,1]==a[2,2]    or   a[0,2]==a[1,1]==a[2,0]:
+        return 1
+def nul(grille):
+    for i in range(9):
+        if grille[i]==1:
+            return 0
+        return 1
+
+def jeu(grille):
+    condition= False
+    tableau=grille(grille)
+    k=0
+    while condition== False:
+        k=k+1
+        if k%2==0:
+            print("C'est au tour du joueur 2")
+            print(tableau)
+            ligne=input("Choisir une ligne: ")
+            colonne=input("Choisir une colonne: ")
+            if tableau[int(ligne)],[int(colonne)]==0 or ligne>3 or colonne>3:
+                condition= True
+                tableau[int(ligne)],[int(colonne)]=tableau[int(ligne)],[int(colonne)]+1
+            else:
+                print(" cette case est impossible à selectionner veuillez en choisir une autre")
+        else:
+            print("C'est au tour du joueur 1")
+             print(tableau)
+            ligne=input("Choisir une ligne: ")
+            colonne=input("Choisir une colonne: ")
+            if tableau[int(ligne)],[int(colonne)]==0 or ligne>3 or colonne>3:
+                condition= True
+                tableau[int(ligne)],[int(colonne)]=tableau[int(ligne)],[int(colonne)]-1
+            else:
+                print(" cette case est impossible à selectionner veuillez en choisir une autre")
+    condition=False
+ print(tableau)
+
+grille(grille)
+gagne= False
+while gagne==False:
+    jeu(grille)
+    if nul(grille):
+        print("Matche Nul")
+    gange=True
+    elif gagne(grille):
+        if 0==gagne(grille):
+            print("le joueur 1 à gagné!")
+        elif 1==gagne(grille):
+            print("le joueurs 2 à gagné!")
+    gange=True
+    
+    
+
 
