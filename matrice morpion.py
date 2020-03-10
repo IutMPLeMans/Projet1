@@ -1,6 +1,6 @@
 import numpy as np
 class Plateau:
-    def __init__(self,ligne,colonne):
+    def __init__(self,ligne,colonne):          #Initialisation du plateau de jeu
         self.ligne= ligne
         self.colonne= colonne
         self.p = np.zeros((ligne,colonne),np.int32)
@@ -9,7 +9,7 @@ class Plateau:
         return np.array_str(self.p)
     def caselibre(self,l,c):
         condition= False
-        if  self.p[l][c]==0 or l>ligne or c>colonne:
+        if  self.p[l][c]==0 and l<ligne and c<colonne:
             return True
 
         return False
