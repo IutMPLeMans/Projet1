@@ -10,8 +10,8 @@ class MaFenetre(wx.Frame):
     def __init__(self, ligne, colonne):
         chemin_script = os.path.dirname(os.path.realpath(__file__))
         super().__init__(parent=None, title='Ma fenêtre avec BitmapButton')
-        self.bmp1 = wx.Bitmap("H:\Semestre_4\TraitementImages\Traitement_Image\Collection_images\ceramic.png", wx.BITMAP_TYPE_PNG) 
-        self.bmp2 = wx.Bitmap("H:\Semestre_4\TraitementImages\Traitement_Image\Collection_images\bateau.png", wx.BITMAP_TYPE_PNG) 
+        self.bmp1 = wx.Bitmap("L:\Semestre 4\S4 PPN 2013\M 4204 MC S4-4\Traitement d'images\Collection_images\ceramic.png", wx.BITMAP_TYPE_PNG) 
+        self.bmp2 = wx.Bitmap("L:\Semestre 4\S4 PPN 2013\M 4204 MC S4-4\Traitement d'images\Collection_images\ours.png", wx.BITMAP_TYPE_PNG) 
         self.ligne= ligne
         self.colonne= colonne
         self.plateau = np.zeros((ligne,colonne),np.int32)
