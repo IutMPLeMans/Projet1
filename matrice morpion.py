@@ -23,31 +23,29 @@ def jeu(grille):
             print(tableau)
             ligne=input("Choisir une ligne: ")
             colonne=input("Choisir une colonne: ")
-            if tableau[int(ligne)],[int(colonne)]==0 or ligne>3 or colonne>3:
+            if tableau[[int(ligne)],[int(colonne)]]==0 or ligne>3 or colonne>3:
                 condition= True
-                tableau[int(ligne)],[int(colonne)]=tableau[int(ligne)],[int(colonne)]+1
+                tableau[[int(ligne)],[int(colonne)]]=tableau[int(ligne)],[int(colonne)]+1
             else:
                 print(" cette case est impossible à selectionner veuillez en choisir une autre")
         else:
             print("C'est au tour du joueur 1")
-             print(tableau)
+            print(tableau)
             ligne=input("Choisir une ligne: ")
             colonne=input("Choisir une colonne: ")
-            if tableau[int(ligne)],[int(colonne)]==0 or ligne>3 or colonne>3:
+            if tableau[[int(ligne)],[int(colonne)]]==0 or ligne>3 or colonne>3:
                 condition= True
-                tableau[int(ligne)],[int(colonne)]=tableau[int(ligne)],[int(colonne)]-1
+                tableau[[int(ligne)],[int(colonne)]]=tableau[int(ligne)],[int(colonne)]-1
             else:
                 print(" cette case est impossible à selectionner veuillez en choisir une autre")
     condition=False
- print(tableau)
 
-grille(grille)
 gagne= False
 while gagne==False:
     jeu(grille)
     if nul(grille):
         print("Matche Nul")
-    gange=True
+        gagne=True
     elif gagne(grille):
         if 0==gagne(grille):
             print("le joueur 1 à gagné!")
