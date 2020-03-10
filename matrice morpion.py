@@ -51,9 +51,9 @@ def jeu(grille):
             else:
                 print(" cette case est impossible à selectionner veuillez en choisir une autre")
     condition=False
-    print(tableau)
+    print(tableau);
 
-gagne= False
+gagne==False;
 while gagne==False:
     jeu(grille)
     if nul(grille):

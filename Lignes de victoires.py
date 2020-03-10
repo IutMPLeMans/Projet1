@@ -8,6 +8,7 @@
 #    print("gagne")
 
 ##Remplissage de la matrice
+#def 
 #if joueur==1 :
 #	grille[int(colonne)+int(ligne)*3]="X"
 #	if joueur==2 :
