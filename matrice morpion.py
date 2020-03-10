@@ -9,7 +9,7 @@ class Plateau:
         return np.array_str(self.p)
     def caselibre(self,l,c):
         condition= False
-        if  self.p[l][c]==0 and l<ligne and c<colonne:
+        if  self.p[l][c]==0 and l>ligne and c>colonne:          #'c' et 'l' sont la taille de la matrice, 'ligne' et 'colonne' servent à situer la cellule de la matrice
             return True
 
         return False

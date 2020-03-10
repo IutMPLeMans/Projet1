@@ -8,12 +8,12 @@
 #    print("gagne")
 
 ##Remplissage de la matrice
-#def 
-#if joueur==1 :
-#	grille[int(colonne)+int(ligne)*3]="X"
-#	if joueur==2 :
-#		grille[int(colonne)+int(ligne)*3]="O"
-#    afficher_grille(grille)
+def _rempl_(self,colonne,ligne):
+	if joueur==1 :
+		grille[int(colonne)+int(ligne)*3]="X"
+	if joueur==2 :
+		grille[int(colonne)+int(ligne)*3]="O"
+    afficher_grille(grille)
 
 #Définition des lignes de victoires
 def est_gagnant(grille):
