@@ -10,16 +10,15 @@ class Plateau:
     def __repr__(self):
         return np.array_str(self.p)
     def caselibre(self,l,c):
-        condition= False
         if  self.p[l][c]==0 and l<ligne and c<colonne:          #'c' et 'l' servent à situer la cellule de la matrice, 'ligne' et 'colonne' sont la taille de la matrice
             return True
-
-        return False
+        else:
+            return False
 
     def set1(self,l,c):
-        self.p[l][c]=="X"
+        self.p[int(c)+int(l)*3]="X"
     def set2(self,l,c):
-        self.p[l][c]=="O"
+        self.p[int(c)+int(l)*3]="O"
 
     def est_gagnant(self):
         if (self.p[0]==self.p[1]) and (self.p[0]==grille[2]) and (self.p[0]==("X" or "O")):
@@ -47,10 +46,10 @@ class Plateau:
         return 1
 
     def jeu(self):
-        condition= False
-        jeu=Plateau(9,9)
+        x=3
+        jeu=Plateau(x,x)
         k=0
-        while condition== False:
+        while caselibre(self,l,c)==True:
             k=k+1
             if k%2==0:
                 print("C'est au tour du joueur 2")
