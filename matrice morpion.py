@@ -3,12 +3,11 @@ class Plateau:
     def __init__(self,ligne,colonne):          #Initialisation du plateau de jeu
         self.ligne= ligne
         self.colonne= colonne
-        ligne=3
-        colonne=3
         self.p = np.zeros((ligne,colonne),np.int32)
  #convertion pour afficher la matrice
     def __repr__(self):
         return np.array_str(self.p)
+
     def caselibre(self,l,c):
         if  self.p[l][c]==0 and l<ligne and c<colonne:          #'c' et 'l' servent à situer la cellule de la matrice, 'ligne' et 'colonne' sont la taille de la matrice
             return True
@@ -20,7 +19,7 @@ class Plateau:
     def set2(self,l,c):
         self.p[int(c)+int(l)*3]="O"
 
-    def est_gagnant(self):
+    def est_gagnant(self,p):
         if (self.p[0]==self.p[1]) and (self.p[0]==grille[2]) and (self.p[0]==("X" or "O")):
             return 1
         if (self.p[3]==self.p[4]) and (self.p[3]==self.p[5]) and (self.p[3]==("X" or "O")):
@@ -63,8 +62,8 @@ class Plateau:
             else:
                 print("C'est au tour du joueur 1")
                 print(jeu)
-                l=input("Choisir une ligne: ")
-                c=input("Choisir une colonne: ")
+                l=int(input("Choisir une ligne: "))
+                c=int(input("Choisir une colonne: "))
                 if jeu.caselibre(l,c) :
                     jeu.set2(l,c)
                 else:
