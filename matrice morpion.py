@@ -1,6 +1,6 @@
 import numpy as np
 class Plateau:
-    def __init__(self,ligne,colonne):
+    def __init__(self,ligne,colonne):          #Initialisation du plateau de jeu
         self.ligne= ligne
         self.colonne= colonne
         self.p = np.zeros((ligne,colonne),np.int32)
@@ -9,18 +9,17 @@ class Plateau:
         return np.array_str(self.p)
 
     def caselibre(self,l,c):
-        if  self.p[l][c]==0 or l>ligne or c>colonne:
+        if  self.p[l][c]==0 and l<ligne and c<colonne:          #'c' et 'l' servent à situer la cellule de la matrice, 'ligne' et 'colonne' sont la taille de la matrice
             return True
-
+        else:
+            return False
 
     def set1(self,l,c):
-
-        self.p[l][c]=="X"
-
+        self.p[int(c)+int(l)*3]="X"
     def set2(self,l,c):
-        self.p[l][c]=="O"
+        self.p[int(c)+int(l)*3]="O"
 
-    def est_gagnant(self):
+    def est_gagnant(self,p):
         if (self.p[0]==self.p[1]) and (self.p[0]==grille[2]) and (self.p[0]==("X" or "O")):
             return True
         if (self.p[3]==self.p[4]) and (self.p[3]==self.p[5]) and (self.p[3]==("X" or "O")):
@@ -46,9 +45,10 @@ class Plateau:
         return 1
 
     def jouer(self):
-        condition= False
+        x=3
+        jeu=Plateau(x,x)
         k=0
-        while condition== False:
+        while caselibre(self,l,c)==True:
             k=k+1
             if k%2==0:
                 print("C'est au tour du joueur 2")
@@ -84,7 +84,7 @@ while gagne==False:
             print("le joueur 1 à gagné!")
         elif "X"==ok.gagne(self):
             print("le joueurs 2 à gagné!")
-    gange=True
+    gagne=True
     
     
 
