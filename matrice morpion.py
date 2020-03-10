@@ -19,7 +19,7 @@ class Plateau:
     def set2(self,l,c):
         self.p[int(c)+int(l)*3]="O"
 
-    def est_gagnant(self,p):
+    def est_gagnant(self):
         if (self.p[0]==self.p[1]) and (self.p[0]==grille[2]) and (self.p[0]==("X" or "O")):
             return 1
         if (self.p[3]==self.p[4]) and (self.p[3]==self.p[5]) and (self.p[3]==("X" or "O")):
@@ -28,7 +28,7 @@ class Plateau:
             return 1
         if (self.p[0]==self.p[3]) and (self.p[0]==self.p[6]) and (self.p[0]==("X" or "O")):
             return 1
-        if (self.p[1]==self.p[4]) and (self.p[1]==self.pe[7]) and (self.p[1]==("X" or "O")):
+        if (self.p[1]==self.p[4]) and (self.p[1]==self.p[7]) and (self.p[1]==("X" or "O")):
             return 1
         if (self.p[2]==self.p[5]) and (self.p[2]==self.p[8]) and (self.p[2]==("X" or "O")):
             return 1
@@ -38,11 +38,11 @@ class Plateau:
             return 1
 
 
-    def nul(self):
-        for i in range(9):
-            if self.p[i]==1:
-                return 0
-        return 1
+#    def nul(self):
+#        for i in range(3):
+#            if self.p[i]==1:
+#                return 0
+#        return 1
 
     def jeu(self):
         x=3
@@ -71,9 +71,9 @@ class Plateau:
         condition=False
         print(jeu)
 
-gagne= False
+gagne=False
 while gagne==False:
-    jeu(self)
+    jeu()
     if nul(self):
         print("Matche Nul")
         gagne=True
