@@ -9,6 +9,8 @@ class Plateau:
         return np.array_str(self.p)
 
     def caselibre(self,l,c):
+        l=self.ligne
+        c=self.c
         if  self.p[l][c]==0 and l<ligne and c<colonne:          #'c' et 'l' servent à situer la cellule de la matrice, 'ligne' et 'colonne' sont la taille de la matrice
             return True
         else:
@@ -48,7 +50,7 @@ class Plateau:
         x=3
         jeu=Plateau(x,x)
         k=0
-        while caselibre(self,l,c)==True:
+        while self.caselibre(self,self.l,self.c)==True:
             k=k+1
             if k%2==0:
                 print("C'est au tour du joueur 2")
