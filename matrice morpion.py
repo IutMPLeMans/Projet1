@@ -3,13 +3,15 @@ class Plateau:
     def __init__(self,ligne,colonne):          #Initialisation du plateau de jeu
         self.ligne= ligne
         self.colonne= colonne
+        ligne=3
+        colonne=3
         self.p = np.zeros((ligne,colonne),np.int32)
  #convertion pour afficher la matrice
     def __repr__(self):
         return np.array_str(self.p)
     def caselibre(self,l,c):
         condition= False
-        if  self.p[l][c]==0 and l>ligne and c>colonne:          #'c' et 'l' sont la taille de la matrice, 'ligne' et 'colonne' servent à situer la cellule de la matrice
+        if  self.p[l][c]==0 and l<ligne and c<colonne:          #'c' et 'l' servent à situer la cellule de la matrice, 'ligne' et 'colonne' sont la taille de la matrice
             return True
 
         return False
@@ -53,17 +55,17 @@ class Plateau:
             if k%2==0:
                 print("C'est au tour du joueur 2")
                 print(jeu)
-                ligne=int(input("Choisir une ligne: "))
-                colonne=int(input("Choisir une colonne: "))
-                if jeu.caselibre(l,c) :
+                l=int(input("Choisir une ligne: "))
+                c=int(input("Choisir une colonne: "))
+                if jeu.caselibre(l,c)==True:
                     jeu.set1(l,c)
                 else:
                     print(" cette case est impossible à selectionner veuillez en choisir une autre")
             else:
                 print("C'est au tour du joueur 1")
                 print(jeu)
-                ligne=input("Choisir une ligne: ")
-                colonne=input("Choisir une colonne: ")
+                l=input("Choisir une ligne: ")
+                c=input("Choisir une colonne: ")
                 if jeu.caselibre(l,c) :
                     jeu.set2(l,c)
                 else:
