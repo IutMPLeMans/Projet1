@@ -51,6 +51,7 @@ class MaFenetre(wx.Frame):
        
 if __name__ == '__main__':
     app = wx.App()
-    frame = MaFenetre(9,9)
+    x=3                     #Taille de la matrice
+    frame = MaFenetre(x,x)
     app.MainLoop()
 
