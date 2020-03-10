@@ -1,18 +1,18 @@
-#Création d'une matrice test
-import numpy as np
-a=np.ones((3,3),np.uint8)
-print(a)
+##Création d'une matrice test
+#import numpy as np
+#a=np.ones((3,3),np.uint8)
+#print(a)
 
 ##Définition des lignes de victoires
 #if (a[0,:].all() or a[1,:].all() or a[2,:].all() or a[:,0].all() or a[:,1].all() or a[:,2].all())==1    or   a[0,0]==a[1,1]==a[2,2]    or   a[0,2]==a[1,1]==a[2,0]:
 #    print("gagne")
 
-#Remplissage de la matrice
-if joueur==1 :
-	grille[int(colonne)+int(ligne)*3]="X"
-	if joueur==2 :
-		grille[int(colonne)+int(ligne)*3]="O"
-    afficher_grille(grille)
+##Remplissage de la matrice
+#if joueur==1 :
+#	grille[int(colonne)+int(ligne)*3]="X"
+#	if joueur==2 :
+#		grille[int(colonne)+int(ligne)*3]="O"
+#    afficher_grille(grille)
 
 #Définition des lignes de victoires
 def est_gagnant(grille):
